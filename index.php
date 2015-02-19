@@ -20,7 +20,21 @@
             <?php require_once "menu.php"; ?>
 
             <!-- Incluindo o Conteúdo -->
-            <?php  ?>
+            <?php
+            if(isset($_GET['arquivo'])) {
+
+                #Aqui valida se o usuário se o arquivo existe...
+                if (file_exists(__DIR__ . "/" . $_GET['arquivo'])) {
+                    require_once $_GET['arquivo'];
+                }else {
+                    #Se o arquivo não existir ele chama a página principal
+                    require_once "home.php";
+                }
+            }else {
+                #Ele cairá aqui na primeira requisição, que acessará o index sem pararametro...
+                require_once "home.php";
+            }
+            ?>
 
         </div>
 
