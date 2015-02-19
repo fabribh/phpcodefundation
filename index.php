@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8" />
+    <head>
+        <meta charset="UTF-8" />
 
-    <title></title>
-    <script type="jscript" src="js/bootstrap.min.js"></script>
-    <script type="text/css" src="css/bootstrap-theme.min.css"></script>
-    <script type="text/css" src="css/bootstrap.min.css"></script>
+        <title>Meu Site</title>
 
-</head>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
 
-<body>
-<div class="container">
-    <ul>
-        <li>Home</li>
-        <li>Empresa</li>
-        <li>Produtos</li>
-        <li>Serviços</li>
-        <li>Contato</li>
-    </ul>
-</div>
+        <!-- Personalização CSS para o navbar -->
+        <link rel="stylesheet" href="css/navbar.css"/>
 
-</body>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <!-- Incluindo o menu -->
+            <?php require_once "menu.php"; ?>
+
+            <!-- Incluindo o Conteúdo -->
+            <?php  ?>
+
+        </div>
+        <!-- Inclusão biblioteca jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+        <!-- Bootstrap JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+
 </html>
