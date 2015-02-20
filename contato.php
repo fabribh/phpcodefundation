@@ -35,10 +35,16 @@
 
     <?php
         if(isset($_POST['inputNome3'])){
-            if(empty($_POST['inputNome3']) and empty($_POST['inputEmail3']) and empty($_POST['inputAssunto3']) and empty($_POST['txtMensagem'])) {
-                echo '<p class="bg-danger" align="center">Preencha todos os campos!</p>';
+            if(!empty($_POST['inputNome3']) and !empty($_POST['inputEmail3']) and !empty($_POST['inputAssunto3']) and !empty($_POST['txtMensagem'])) {
+                echo '<p class="bg-success" align="center">Dados enviados com sucesso, abaixo segue os dados que você enviou:</p>';
+                echo '<p class="bg-info" align="center">
+                    Nome: '.$_POST['inputNome3'].'<br>
+                    Email: '.$_POST['inputEmail3'].'<br>
+                    Assunto: '.$_POST['inputAssunto3'].'<br>
+                    Mensagem: '.$_POST['txtMensagem'].
+                    '</p>';
             } else {
-                echo '<p class="bg-primary" align="center">Dados enviados com sucesso, abaixo segue os dados que você enviou:</p>';
+                echo '<p class="bg-danger" align="center">Preencha todos os campos!</p>';
             }
         }
     ?>
