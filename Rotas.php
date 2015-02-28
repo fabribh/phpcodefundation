@@ -64,8 +64,5 @@ class Rotas {
         } else {
             require_once $rotaUrl;
         }
-
-
-
     }
 }
